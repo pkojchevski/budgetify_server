@@ -1,9 +1,9 @@
 module.exports = {
   dbServer: {
     protocol: 'https://',
-    host: 'pkojchevski.cloudant.com',
-    user: 'pkojchevski',
-    password: 'Pet@r.9791190',
+    host: process.env.CLOUDANT_URL,
+    user: process.env.CLOUDANT_USER,
+    password: process.env.CLOUDANT_PASSWORD,
     userDB: 'sl-users',
     couchAuthDB: '_users'
   },
