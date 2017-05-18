@@ -39,6 +39,9 @@ module.exports = {
     defaultDBs: {
       private: ['budgetify']
     }
+  },
+  providers: {
+    local:true
   }
 
 
