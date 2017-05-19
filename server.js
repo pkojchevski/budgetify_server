@@ -23,7 +23,7 @@ var port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 //app.use(multer({ dest: './uploads/' }));
-//app.use(cors());
+app.use(cors());
 
 //console.log("__dirname:"+__dirname);
 //app.use(express.static(path.join(__dirname, 'client')));
