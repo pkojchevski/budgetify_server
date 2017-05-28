@@ -1,9 +1,11 @@
+//require('dotenv').config();
+
 module.exports = {
   dbServer: {
     protocol: 'https://',
-    host: process.env.CLOUDANT_URL,
-    user: process.env.CLOUDANT_USER,
-    password: process.env.CLOUDANT_PASSWORD,
+    host: CLOUDANT_URL,
+    user: CLOUDANT_USER,
+    password: CLOUDANT_PASSWORD,
     userDB: 'sl-users',
     couchAuthDB: '_users'
   },
@@ -23,6 +25,10 @@ module.exports = {
   //     url: process.env.REDIS_URL
   //   }
   // },
+      defaultSecurityRoles: {
+      admins: ['$slAdmin'],
+      members: []
+    },
   security: {
     maxFailedLogins: 3,
     lockoutTime: 600,
@@ -43,10 +49,6 @@ module.exports = {
   providers: {
     local:true
   }
-
-
-
-
 
 
 };
