@@ -48,7 +48,7 @@ else {
   next();
 }
 
-// });
+});
 
 // console.log('config.dbUrl:'+config.dbUrl);
 // mongoose.connect(config.dbUrl);
